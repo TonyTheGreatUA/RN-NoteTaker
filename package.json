@@ -6,7 +6,9 @@
     "android": "cd android && ./gradlew clean && cd .. && react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint app/",
+    "lint:fix": "eslint app/ --fix"
   },
   "dependencies": {
     "react": "16.8.1",
@@ -16,7 +18,11 @@
     "@babel/core": "^7.5.0",
     "@babel/runtime": "^7.5.0",
     "@react-native-community/eslint-config": "^0.0.3",
+    "babel-eslint": "^10.0.3",
     "babel-jest": "^24.1.0",
+    "eslint": "^6.4.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-native": "^3.7.0",
     "jest": "^24.1.0",
     "metro-react-native-babel-preset": "^0.51.1",
     "react-test-renderer": "16.8.1"

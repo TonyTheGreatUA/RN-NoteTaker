@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import { TextInput, View ,Text} from 'react-native';
 import styles from './Home.component.style';
 import TextArea from '../TextArea/TextArea.component';
+import PropTypes from 'prop-types';
 
 class Home extends Component{
-    state = {
-        title : '',
-        text: ''
-    }
-    setTitle = (title) => this.setState({title})
-    setText = (text) => this.setState({text});
     render(){
+        const {setTitle, title, text, setText} = this.props;
         return(
             <View style={styles.container}>
                 <Text style={styles.titleHeading}> Note Title</Text>
@@ -28,5 +24,12 @@ class Home extends Component{
         );
     }
 }
+
+Home.propTypes = {
+    setTitle: PropTypes.func,
+    setText: PropTypes.func,
+    title: PropTypes.string,
+    text: PropTypes.string
+};
 
 export default Home;
